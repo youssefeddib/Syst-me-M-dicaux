@@ -8,7 +8,7 @@ import java.util.List;
 
 public class RendezVousDAO {
 
-    // Ajouter un rendez-vous
+   
     public void ajouterRendezVous(RendezVous rendezVous) {
         String sql = "INSERT INTO rendezvous (date, heure, motif, statut) VALUES (?, ?, ?, ?)";
         try (Connection conn = DatabaseConnection.getConnection();
@@ -23,7 +23,7 @@ public class RendezVousDAO {
         }
     }
 
-    // Récupérer la liste des rendez-vous
+    
     public List<RendezVous> getRendezVous() {
         List<RendezVous> liste = new ArrayList<>();
         String sql = "SELECT * FROM rendezvous";
@@ -45,7 +45,7 @@ public class RendezVousDAO {
         return liste;
     }
 
-    // Supprimer un rendez-vous par ID
+    
     public void supprimerRendezVous(int id) {
         String sql = "DELETE FROM rendezvous WHERE id = ?";
         try (Connection conn = DatabaseConnection.getConnection();
